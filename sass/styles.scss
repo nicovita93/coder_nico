@@ -5,14 +5,24 @@
 }
 
 /*--------Header---------*/
+@import "variables";
 
-@import "condicionales";
-@import "maps";
-@import "extend";
-@import "mixin";
-@import "servicio";
-@import "nosotros";
-
+/* vista desktop */
+@media only screen and (min-width: 1024px){
+    .navbar-expand-lg .navbar-collapse{justify-content: flex-end;}
+    .footerFlex{display: flex;justify-content: space-around;}
+    .imagenesservicios{width: 725px;display: flex;}
+    .itemcotiza{width: 800px;display: flex;}
+    }
+    
+    /* vista mobile */
+    @media only screen and (max-width: 767px){
+        .footerFlex{display: flex;flex-direction: column;}
+        .imagenesservicios{width: 200px;display: flex;}
+        .itemservicio{width: 200px;display: flex;}
+        .nosotrosp{font-size: medium;}
+        .itemcotiza{width: 200px;display: flex;}
+    }
 .body{
     overflow-x: hidden;
     text-align: justify;
@@ -53,12 +63,14 @@
     text-align: justify;
     color: darkblue;
     line-height: 30px;
+    padding: 10px;
 }
 
 .section__cuerpo{
     background-color: #BEE5EB;
     text-align: center;
     flex-direction: row;
+    flex-wrap: wrap;
     display: flex;
     justify-content: space-evenly 10px;
     overflow-x: hidden;
@@ -74,12 +86,18 @@
     text-shadow: rgb(113, 180, 255) 0 0 10px;
     text-align: center;
 }
-
+.formulario{
+    display: flex;
+    align-content: space-around;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
 .article__servicios{
     color: darkblue;
     background-color: #BEE5EB;
     text-align: justify;
     line-height: 30px;
+    padding: 10px;
 }
 .h2__contacto{
     font-size: xx-large;
@@ -114,6 +132,7 @@
 }
 .imagenesgrid{
     display: grid;
+    justify-content: center;
     background-color: #BEE5EB;
     text-align: center;
     border: black 5px solid;
@@ -172,6 +191,7 @@
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  flex-wrap: wrap;
   text-align: justify;
   -ms-flex-pack: distribute;
       justify-content: space-around;
@@ -235,7 +255,7 @@
     display: grid;
     background-color: #BEE5EB;
     text-align: center;
-    border: black 5px solid;
+    border: #BEE5EB 5px solid;
     grid-column: 1 / span 4;
     grid-row: 1 / Line2;
     justify-items: center;
